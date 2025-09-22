@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>finance</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script  defer src="calc.js"></script>
+  <link rel="stylesheet" href="finance.css" />
+</head>
+ <body >
+    <div style="width:100%;height:100vh;display:flex;flex-direction:column;background-color: #1a2636;padding:10px;">
+     <div style="width: 100%;display:flex;background-color:transparent;flex-direction: row;">
+        <div style="flex:1.5 ;flex-direction:row;">
+        <div style="justify-content: flex-start;background-color: #374250;border-radius: 50%;width:20px;color:aliceblue;padding:10px 10px;margin:15px 10px;"><i class="fa-solid fa-list" style="margin-left:-3px;"></i></div>
+        </div>
+        <div style ="flex:1;display:flex;flex-direction: row;background-color:transparent;">
+            <div style="width:30%;border-radius: 30px;background-color: #374250;color:aliceblue;padding: 10px;margin:15px 5px;
+            "><span style="font-weight:50;">Midnight</span></div>
+            <div style="flex-direction: row;background-color: #374250;border-radius: 50%;width:20px;color:aliceblue;padding:10px 10px;margin: 15px 5px;"><i class="fa-solid fa-gift" style="margin-left:-3px;"></i></div>
+            <div style="flex-direction: row;background-color: #374250;border-radius: 50%;width:20px;color:aliceblue;padding:10px 10px;margin:15px 10px 15px 5px;"><i class="fa-regular fa-bell"></i></div>
+       </div>
+</div>
+<h1><span style="color:#a0a5b2">Hai,</span> Marinda!</h1>
+
+<div class="cardholder">
+  <div style="background-color:black;display: flex; flex-direction: column; height: 75%;padding: 10px; border-radius: 15px;">
+  <div class=" card stripe">
+    
+    <img src="5968382.png" >
+  </div>
+  <div class="card master">
+    <img src="master.png">
+ </div>
+ <div class="card visa">
+  
+  <img src="vis-removebg-preview.png" >
+  
+ </div>
+ <div  style="display:flex;flex-direction: column; " class="card leather">
+  
+  <div style="display:flex;
+  width:100%;border-radius:30px ;background-color:transparent;position:relative;justify-content: space-between;">
+
+  <div class="circle"> </div>
+  <div class="rightcir"></div>
+   
+   </div>
+    
+   <div style="display:block;width:100%" >
+    
+   <p style="margin:5px 0px 0px 20px;color:#a0a5b2; ">Total Balance<i class="fa-solid fa-eye-slash"  style="font-size: 13px;;"></p></i>
+   <input value="$0.00"  class ="bal" style="margin:5px 0px 0px 25px;" type="text" >
+  <p style="margin:10px 0px 0px 20px;color:#a0a5b2;">9.3005544 BTC</p>
+  
+
+</div>
+  <img src="Screenshot_26-8-2025_154154_dribbble.com.jpeg">
+</div>
+   </div> 
+
+
+
+  <div style ="flex:1;display:flex;flex-direction: row;background-color:transparent;margin:10px 0px;gap:10px;">
+            <div style="width:25%;border-radius: 10px;
+            box-shadow: inset -5px -40px 25px rgba(232, 230, 230, 0.3);padding:3px;"><button  class="mbtn" style="color:black;cursor:pointer;width:100%;height:100%;border-radius:10px"><i class="fa-solid fa-circle-plus"></i><span>Buy</span> </button></div>
+            <button  class="mbtn" style="flex-direction: row;background-color: #374250;border-radius:13px;width:25%;height:100%;color:rgb(164, 184, 202);padding:3px; background-color: #2F303B;"><i class="fa-solid fa-circle-minus"></i><span style="color:white">Sell</span></button>
+            <button class="mbtn" style="flex-direction: row;background-color: #374250;border-radius:13px;width:40%;height:100%;color:rgb(164, 184, 202);padding:5px;background-color: #2F303B;"><i class="fa-solid fa-circle-arrow-down"></i><span style="color:white;">Deposit</span></button>
+            <button class="mbtn" style="flex-direction: row;background-color: #374250;border-radius:13px;width:20%;height:100%;color:rgb(164, 184, 202);padding:5px; background-color: #2F303B;"><i class="fa-solid fa-up-down"></i></button>
+            
+       </div>
+</div>
+<script>
+  
+  let buttons= document.querySelectorAll(".mbtn");
+  const bal=document.querySelector('.bal')
+  window.onload = () => {
+  const balValue = localStorage.getItem("balance");
+  if (balValue) {
+    document.querySelector(".bal").value = balValue;
+  }
+};
+  buttons.forEach(button=>
+  {button.addEventListener("click",function(){
+    buttons.forEach(btn=>{btn.style.backgroundColor="#2F303B";
+
+     
+    });
+    window.location.href="fpage.html";
+      // window.location.href = "fpage.html?bal=" + encodeURIComponent(bal);
+    this.style.backgroundColor="white";
+    this.style.color="black";
+    this.querySelector("span").style.color="black";
+   /*  buttons.forEach(btn=>btn.classList.remove("active"));
+    this.classList.add("active"); */
+
+  });
+
+  });
+</script>
+<div class="wrapper">
+  <div style="font-size: 20px;">Favorites</div>
+  <div style="color:rgb(185, 218, 232);font-size:15px";>See all</div>
+</div>
+<div class="out">
+  <div class="left">
+    <h4 style="margin:10px 0px 15px 0px;color:rgb(194, 168, 55)"><i class="fa-brands fa-bitcoin"></i><span style="color:white;">   Bitcoin</span></h4>
+    <p style="color:aliceblue;margin:0px;">$95,257</p>
+    <p style="color: rgb(173, 53, 53);margin:5px 0px 0px 0px;">-0.42%</p>
+  </div>
+  <div class="left">
+     <h4 style="margin:10px 0px 15px 0px; color:white;"><i class="fa-brands fa-ethereum"></i>      Ethereum</h4>
+    <p style="color:aliceblue;margin:0px/* 15px 10px 10px 10px; */">$1,8112.92</p>
+    <p style="color: rgb(42, 143, 70);margin:5px 0px 0px 0px;">+1.68%</p>
+  </div>
+</div>
+<div style="margin-top:20px"class="wrapper">
+  <div style="font-size: 20px;" >Transactions</div>
+  <div style="color:rgb(185, 213, 232);font-size:15px";>See all</div>
+</div>
+<div class="imgs">
+
+    <div style="flex:0.3"><img src="bth-removebg-preview.png"></div>
+    
+  <div style="display:flex;flex:3.5;justify-content: space-between;">
+  <div>SGD<i class="fa-solid fa-arrow-right"></i>USD</div>
+  <div>+US $3.21</div>
+</div>
+</div>
+<div class="imgs">
+
+    <div style="flex:0.3"><img src="bth-removebg-preview.png"></div>
+    
+  <div style="display:flex;flex:3.5;justify-content: space-between;">
+  <div>SGD<i class="fa-solid fa-arrow-right"></i>USD</div>
+  <div>+US $3.21</div>
+</div>
+</div>
+<footer>
+  <div class="foot">
+    <div style="color:rgb(126, 184, 209);align-items: center;">
+    <i class="fa-solid fa-house"></i>
+    <p style="margin:5px;margin-left:-5px;">Home</p>
+    </div>
+    <div>
+    <i class="fa-solid fa-money-bill-trend-up"></i>
+    <p style="margin:5px;margin-left:-6px;">Trade</p>
+    </div>
+    <div>
+    <i class="fa-solid fa-store"></i>
+    <p style="margin:5px;margin-left:-9px;">Market</p>
+    </div>
+    <div style="padding:10px 0px;">
+    <i class="fa-solid fa-credit-card"></i>
+    <p style="margin:5px;margin-left:-5px;">Cards</p>
+    </div>
+
+  
+
+
+
+</div>
+</footer>
+</div>
+     </body><!-- linear-gradient(to center, #d4a33d 0%, #fec76f 100%) -->

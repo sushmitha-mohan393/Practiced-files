@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script  defer src="validate.js"></script>
+  <link rel="stylesheet" href="des.css" />
+</head>
+<body >
+    <div style="width: 100%;display:flex;height: 100vh;background-color:#333;flex-direction: column;">
+        <div style="width: 100%;flex: 1;background-color: #333;">
+           <p style="color: white; background-color:transparent; font-size: 24px;margin-bottom:10px;">&larr;</p>
+  <h1>
+    Go ahead and set up your account
+  </h1>
+  <p>
+    Sign in-up to enjoy the best managing experience
+
+  </p>
+ 
+        </div>
+         <div style="width: 100%;flex:2.5;background-color: #ffffff;border-radius:30px 30px 0px 0px;">
+            <div class="inner" >
+      
+      <button type="button" class="tgl active" id="lg" onclick="this.classList.toggle('active')">Login</button>
+      <button type="button" class="tgl" >Register</button>
+            </div>
+      <script>
+  const buttons = document.querySelectorAll(".tgl");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active")); 
+      btn.classList.add("active"); 
+    });
+  });
+</script>
+      
+    
+    <form  class="holder" id="form" >
+<!-- <div class="input-group">
+    <label for="email">Email Address</label>
+    <div class="input-box">
+      <i class="fa-solid fa-envelope icon-left"></i>
+      <input type="email" class="email"  />
+    </div>
+  </div> -->
+  <div class="input-box">
+    <i class="fa-regular fa-envelope icon-left" style="color: #0d5e46;"></i>
+      <div style =" display:flex ;background-color: transparent;flex-direction: column;width:100%;height:100%">
+        <div style="width:100%;flex:1; padding-left: 25px;text-align:start; font-size: small;">Email Address</div>
+      <div style="width:100%;flex:2.5;"><input type="text" id="emailval"  class="email"  placeholder=" Email Address" style ="::placeholder{text-align:start;}"></div>
+      </div>
+      </div>
+       <div class="input-box">
+        <div>
+      <i class="fa-solid fa-lock icon-left " style="color: #0d5e46; justify-content: center;"></i>
+       <div style =" display:flex ;background-color: transparent;flex-direction: column;width:100%;height:100%">
+        <div style="width:100%;flex:1; padding-left: 25px;text-align:start; font-size: small;">Password</div>
+      <div style="width:100%;flex:2.5;"><input type="text" id="passval" class="email"  placeholder=" Password" style ="::placeholder{text-align:start;}"></div>
+      
+       </div>
+      
+       </div>
+       <i class="fa-regular fa-eye icon-right" style="color:rgb(193, 185, 185);" ></i>
+       </div>
+             <div class="wrapper">
+        <div> <input type="checkbox" class="check"><span>Remember me </span>
+        </div><a href="#">
+        <div class="forgot" style="color: #5db99d;">Forgot Password?</div></a>
+      </div>
+     <div id="errors"></div>
+      <button class="login" id ="lgn"type="submit" ><span id="btntext">Logging in</span>
+       <i id="loader" class="fa-solid fa-spinner"></i>
+      </button>
+      <script>
+        localStorage.setItem("balance","$0.00")
+      </script>
+
+    <!--     
+     <script>
+        var lgnbtn=document.getElementById("lgn");
+        var textbt=document.getElementById("btntext");
+        var ldn=document.getElementById("loader");
+        lgnbtn.addEventListener("click",function(event){
+          event.preventDefault();
+          textbt.textContent="Logging in";
+          ldn.style.display="inline-block";
+          lgnbtn.disabled=true;
+          setTimeout(()=>
+          {
+            lgnbtn.closest("form").submit();},3000);
+          
+        });
+
+      
+      </script>  -->
+    
+      
+
+          </form>
+    
+          <div class="line-with-text">
+  <div class="line"></div>
+  <span>Or login with</span>
+  <div class="line"></div>
+</div>
+    <div class="out">
+    <button class="social">
+      <img src="goggle.jpg" alt="gpg">Google</button>
+    <button class="social"><img src="fb.webp" alt="fbgpg">Facebook</button>
+    </div>
+         </div>
+ 
+    </div>
+    
+</body>
+</html
+ 

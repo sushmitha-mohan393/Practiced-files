@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body 
+{
+    padding: 5%;
+   
+    font-family:'Roboto',sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color:hsl(109, 38%, 29%,0.5);
+}
+
+a:active {
+  color: red;
+}
+ol
+{
+    list-style-type: roman;
+    
+}
+ul {
+  list-style-type: square;
+  text-align:none;
+  color: #00f;
+  line-height: 1.6;
+}
+
+ul li:nth-child(even) {
+  color: red;
+}
+
+ul ::marker {
+    color:red;
+    font-family: fantasy;
+    content : "$";
+  
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+  
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+.absolute {
+  background-color: #00f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.relative {
+  background-color: #f00;
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+.fixed {
+  background-color: green;
+  position: fixed;
+  top: 100px;
+}
+
+.sticky {
+  background-color: #000;
+  position: sticky;
+  top: 0;
+}
+body {
+  font-family: "Roboto",
+    sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+}
+
+.box1 {
+  min-width: 100px;
+  min-height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding:0.5rem;
+}
+.profile-pic-figure
+{
+    margin-top: 50px;
+    width:35%;
+    padding:20px;
+
+}
+
+.hero {
+  border-bottom: 2px solid #000;
+  padding: 0;
+  display: flex;
+  width:50px;
+  height:50px;
+  /* justify-content: flex-start; */
+  align-items: center;
+  gap: 30px;
+  background-color: rgb(182, 173, 160);
+  
+  background-image: url('background.jpg');
+    background-size: cover;
+    background-position: top right;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double gray;
+  border-radius: 50%;
+}

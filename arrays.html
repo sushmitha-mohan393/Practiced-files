@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Methods</title>
+</head>
+<body>
+    <h1 style="font-size:100px;">Array Methods</h1>
+  <h2 style="font-size: 70px;">Check Console for Output &rarr;</h2>
+<script>    
+const array = ["one", "two", "three"];
+console.log("array:", array);
+
+let str = "hello";
+let chars = Array.from(str, ch => ch.toUpperCase());
+console.log("Array.from:", chars); 
+
+
+async function demoFromAsync() {
+  const arr = await Array.fromAsync([Promise.resolve(1), Promise.resolve(2)]);
+  console.log("Array.fromAsync:", arr);
+}
+demoFromAsync();
+
+
+console.log("isArray:", Array.isArray([1,2,3]), Array.isArray("test"));
+
+
+console.log("Array.of:", Array.of(10,20,30));
+
+
+
+let numbers = [10, 20, 30, 40, 50];
+
+
+console.log("at:", numbers.at(-1)); 
+
+
+console.log("concat:", numbers.concat([60,70]));
+
+
+let copyArr = [1,2,3,4,5];
+copyArr.copyWithin(0,3);
+console.log("copyWithin:", copyArr);
+
+
+for (let [index, value] of numbers.entries()) {
+  console.log("entries:", index, value);
+}
+
+
+console.log("every > 5:", numbers.every(x => x > 5));
+
+
+let fillArr = new Array(5).fill("x");
+console.log("fill:", fillArr);
+
+let big = numbers.filter(n => n > 25);
+console.log("filter > 25:", big);
+
+console.log("find > 25:", numbers.find(n => n > 25));
+
+
+console.log("findIndex > 25:", numbers.findIndex(n => n > 25));
+
+
+console.log("findLast > 25:", numbers.findLast(n => n > 25));
+console.log("findLastIndex > 25:", numbers.findLastIndex(n => n > 25));
+
+
+let nested = [1,[2,[3,[4]]]];
+console.log("flat:", nested.flat(2)); 
+
+
+let phrases = ["hello world", "good morning"];
+console.log("flatMap:", phrases.flatMap(p => p.split(" "))); 
+
+
+numbers.forEach(n => console.log("forEach:", n));
+
+
+console.log("includes 30:", numbers.includes(30));
+
+
+console.log("indexOf 30:", numbers.indexOf(30));
+
+console.log("join:", numbers.join(" - "));
+
+
+for (let k of numbers.keys()) console.log("key:", k);
+
+
+console.log("lastIndexOf 20:", [1,2,3,2,1].lastIndexOf(2));
+
+
+let doubled = numbers.map(n => n*2);
+console.log("map doubled:", doubled);
+
+
+let stack = [];
+stack.push(1); stack.push(2);
+console.log("push:", stack);
+console.log("pop:", stack.pop()); 
+
+let sum = numbers.reduce((a,b) => a+b, 0);
+console.log("reduce sum:", sum);
+
+
+let word = ["o","l","l","e","h"].reduceRight((a,b)=>a+b);
+console.log("reduceRight:", word);
+
+
+console.log("reverse:", [...numbers].reverse());
+
+
+let queue = [2,3];
+queue.unshift(1);
+console.log("unshift:", queue); 
+console.log("shift:", queue.shift()); 
+
+
+console.log("slice(1,3):", numbers.slice(1,3));
+
+
+console.log("some > 45:", numbers.some(n=>n>45));
+
+
+let words = ["banana","apple","cherry"];
+console.log("sort:", words.sort());
+
+
+let spliceArr = [1,2,3,4];
+spliceArr.splice(1,2,"a","b");
+console.log("splice:", spliceArr); 
+
+
+
+// // toLocaleString()
+// console.log("toLocaleString:", [1000,2000].toLocaleString()); 
+
+
+let rev = [1,2,3].toReversed();
+console.log("toReversed:", rev);
+
+
+let sorted = [3,1,2].toSorted();
+console.log("toSorted:", sorted);
+
+let spliced = [1,2,3,4].toSpliced(1,2,9);
+console.log("toSpliced:", spliced);
+
+
+console.log("toString:", [1,2,3].toString());
+
+
+for (let v of numbers.values()) console.log("values:", v);
+
+
+let withArr = [1,2,3];
+console.log("with:", withArr.with(1,99)); // [1,99,3]
+</script>
+</body>

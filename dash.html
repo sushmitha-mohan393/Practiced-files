@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="food.css" />
+  <script  defer src="opt.js"></script>
+</head>
+<body >
+
+
+
+<div style="width: 100%;display:flex;height: 100vh;background-color:white;flex-direction: column;padding:20px; ">
+<div  style="display:flex;flex-direction: row;padding:10px;"> 
+    <div style="flex:1;font-size:45px;font-weight: 600;">Menu</div>
+    <div style="flex:0.2;width:30px;height:30px;border-radius: 50%;"><img src="/Ellipse 2.png" ></div>
+</div>
+<div class="search">
+    <div style="margin:10px 0px 20px 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #ABA9A9; font-size: x-large;"></i></div>
+    <input type="text" id="ser" placeholder="Search" style="flex:1;">
+    <button onclick="searchItems()">Search</button>
+   
+   
+    
+</div>
+
+<div class="scroll">
+    <div style="display:flex;flex-direction: column;align-items:center;">
+     <button class="options" data-target="all" ><img src="/food1.png" ></button>
+     <label >All</label>
+    </div>
+<div style="display:flex;flex-direction: column;align-items:center;">
+    <button class="options" data-target="burger"><img src="/burger.png"></button>
+    <label >Burger</label>
+</div>
+<div style="display:flex;flex-direction: column;align-items:center;">
+ <button class="options" data-target="pizza" ><img src="/piz.png" ></button> 
+ <label >Pizza</label>
+</div>
+<div style="display:flex;flex-direction: column;align-items:center;">
+ <button class="options" data-target="biryani" ><img src="/biryanii.png" ></button>
+ <label >Biryani</label>
+</div>
+<div style="display:flex;flex-direction: column;align-items:center;">
+ <button class="options" data-target="soft" ><img src="/soft-removebg-preview.png"></button>
+ <label >Soft Drinks</label>
+</div>
+<div style="display:flex;flex-direction: column;align-items:center;">
+ <button class="options" data-target="dessert"><img src="/dessert-removebg-preview.png" ></button>
+ <label >Dessert</label>
+ </div>
+
+</div>
+<div style="margin:20px 0px ;font-size: 30px;font-family:Poppins;">Promotions</div>
+<div class="prom">
+
+    
+    <p style="margin:10px 0px;">Today&apos;s offer</p>
+<h4 style="font-size: 20px;margin:10px 0px;font-weight: 600;">Free Box of Fries</h4>
+<p style="margin:10px 0px;">On All Orders above $50</p>
+<img src="/fries-3 1.png">
+
+
+</div>
+<div  id ="pop" style="margin:30px 0px ;font-size: 30px;font-family:Poppins;"><span>Popular</span></div>
+ <div class="vertical">
+   <div class="no-results" style="display:none; font-size:20px;font-family:Poppins; color:#858585; text-align:center; margin:20px;">
+        No results found🙁
+    </div>
+  
+    <!-- <div class="row"style="display:flex;flex-direction:row; gap:40px;"> -->
+  <!--     
+    <div class="opt" data-descrip="Big juicy beef burger with cheese, lettuce, tomato, onions and special sauce.">
+        <img src="/images/burg.png">
+        <div style="font-family: Poppins;">Beef Burger</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <p style="color:#C9AA05">
+              $15
+            </p>
+           
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+         
+        </div>
+
+</div>
+
+
+     <div class="opt" data-descrip="Aromatic basmati rice layered with rich spices and tender meat, slow-cooked to perfection.">
+        <img src="/biryanii.png" >
+        <div style="font-family: Poppins;">Dum biryani</div>
+       
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <p style="color:#C9AA05">
+              $20
+            </p>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div> -->
+<!-- </div> -->
+
+<!-- <div class="row"style="display:flex;flex-direction:row; gap:40px;">
+    <div class="opt" data-descrip="Refreshing fizzy cola with a bold, crisp taste.">
+        <img src="/soft-removebg-preview.png">
+        <div style="font-family: Poppins;">Pepsi</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <p style="color:#C9AA05">
+              $7
+            </p>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div>
+    <div class="opt" data-descrip="Classic cheesy pizza topped with golden melted mozzarella.">
+        <img src="/piz.png">
+        <div style="font-family: Poppins;">Cheese Pizza</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <p style="color:#C9AA05">
+              $18
+            </p>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div>
+ </div>
+<div style="display:flex;flex-direction:row; gap:40px;">
+    <div class="opt">
+        <img src="/chicken.png">
+        <div style="font-family: Poppins;">Chicken Burger</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <p style="color:#C9AA05">
+              $14
+            </p>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div>
+    <div class="opt">
+        <img src="/burger.png">
+        <div style="font-family: Poppins;">Veg Burger</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <div style="color:#C9AA05">
+              $16
+            </div>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div>
+</div> -->
+ </div> 
+   
+
+
+
+
+
+    <script>
+/*  const dat =[
+        { img: "/images/burg.png", name: "Beef burger",  },
+    { img: "/biryanii.png", name: "Dum Biryani" },
+    { img: "/soft-removebg-preview.png", name: "Pepsi" },
+    { img: "/piz.png", name: "Cheese Pizza" },
+      { img: "/images/burg.png", name: "Beef Burger" },
+    { img: "/chicken.png", name: "Chicken Burger" },
+    { img: "/burger.png", name: "Veg Burger" },
+    { img: "/cheese.png", name: "Cheese Burger" },
+    { img: "/piz.png", name: "Cheese Pizza" },
+    { img: "/pizza2.png", name: "Paneer Pizza" },
+    { img: "/pizza1.png", name: "Veggie Pizza" },
+    { img: "/pizza3.png", name: "BBQ Pizza" },
+    { img: "/biryanii.png", name: "Dum Biryani" },
+    { img: "/pngtree-chicken-biryani-front-view-png-image_9167532.png", name: "Chicken Biryani" },
+    { img: "/pngtree-elegant-presentation-of-delicious-mutton-biryani-png-image_13388364 (1).png", name: "Egg Biryani" },
+    { img: "/paneer-biryani-8229 (1).png", name: "Veg Biryani" },
+    { img: "/coke.png", name: "Coke" },
+    { img: "/fan.png", name: "Fanta" },
+    { img: "/soft-removebg-preview.png", name: "Pepsi" },
+    { img: "/mir.jpg", name: "Mirinda" },
+    { img: "/cake.png", name: " Cheesecake" },
+    { img: "/cup.jpg", name: "Cupcake" },
+    { img: "/tir.png", name: "Tiramisu" },
+    { img: "/fal.png", name: "Falooda" }
+
+    ]; */
+ 
+
+
+
+ let buttons= document.querySelectorAll(".options");
+
+ buttons.forEach(b=>
+  {b.addEventListener("click",function(){
+    buttons.forEach(btn=>{btn.style.backgroundColor=" #EFEEEE";
+   if(btn.nextElementSibling.tagName==="LABEL")
+   {
+    btn.nextElementSibling.style.color="#858585";
+   }
+
+
+     
+    });
+    
+    this.style.backgroundColor="#493e97";
+    let label=this.nextElementSibling;
+    if(label && label.tagName==="LABEL")
+    {
+        label.style.color="#493e97"
+    }
+  });
+
+  });
+
+ /* const ids=document.querySelector(".vertical").innerHTML=dat.map(data=>`
+    <div style="display:flex;flex-direction:row; gap:40px;">
+    <div class="opt">
+        <img src="/images/burg.png">
+        <div style="font-family: Poppins;">Beef Burger</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <div style="color:#C9AA05">
+              $20
+            </div>
+           
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+         
+        </div>
+
+</div>
+
+     <div class="opt">
+        <img src="/biryanii.png">
+        <div style="font-family: Poppins;">Dum biryani</div>
+        
+        <div style="display:flex;flex-direction: row;justify-content: space-between;margin:10px 0px;">
+            <div style="color:#C9AA05">
+              $20
+            </div>
+            <div>
+            <i class="fa-solid fa-circle-plus" style="color:#0E803C"></i>  
+            </div>
+        </div>
+
+</div>
+</div>`); */
+ 
+
+  const balValue = localStorage.getItem("quan");
+  console.log(balValue);
+  
+  if (balValue) {
+    document.querySelector(".quan").textContent = balValue;
+  }
+
+
+
+
+
+
+    </script>
+
+    <footer>
+        <div class="foot">
+   <button class="ficon" style="border:none;outline:none;">
+    <i class="fa-solid fa-house"></i>
+   </button>
+    <button class="ficon"style="border:none;outline:none;">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+  
+   
+    <button class="ficon" onclick="window.location.href='cart.html'" style="border:none;outline:none;background-color: transparent;" >
+      <div style="position:relative;border-radius:50%;color:white;background-color: black;right:-10px;top:-10px;"><span class="quan">0</span></div>
+    <i class="fa-solid fa-cart-shopping" style="position:relative;top:-10px"></i>
+    
+  
+    </button>
+   <button class="ficon" style="border:none;outline:none;">
+    <i class="fa-solid fa-user"></i>
+  
+   </button>
+
+  
+
+
+
+</div>
+    </footer>
+    </body>
+    </html>
+ 

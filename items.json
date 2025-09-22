@@ -1,0 +1,41 @@
+{ 
+    
+  "allItems":[
+    { "img": "/images/burg.png", "name": "Beef burger","price": "$15","id":"1"},
+    { "img": "/biryanii.png", "name": "Dum Biryani","price": "$20","id":"2"},
+    { "img": "/soft-removebg-preview.png", "name": "Pepsi","price":"$7","id":"3" },
+    { "img": "/piz.png", "name": "Cheese Pizza" ,"price":"$18","id":"4"},
+  
+  
+    { "img": "/images/burg.png","name": "Beef Burger","price":"$15","id":"5" },
+    { "img": "/chicken.png", "name": "Chicken Burger" ,"price":"$14","id":"6"},
+    { "img": "/burger.png", "name": "Veg Burger","price":"$16","id":"7" },
+    { "img": "/cheese.png", "name": "Cheese Burger","price": "$18","id":"8"},
+  
+
+    { "img": "/piz.png", "name": "Cheese Pizza","price": "$18","id":"9" },
+    { "img": "/pizza2.png", "name": "Paneer Pizza","price": "$17","id":"10" },
+    { "img": "/pizza1.png", "name": "Veggie Pizza","price": "$18" ,"id":"11"},
+    { "img": "/pizza3.png", "name": "BBQ Pizza" ,"price": "$20","id":"12"},
+ 
+
+  
+
+    { "img": "/biryanii.png", "name": "Dum Biryani" ,"price": "$20","id":"13"},
+    { "img": "/pngtree-chicken-biryani-front-view-png-image_9167532.png", "name": "Chicken Biryani" ,"price": "$22","id":"14"},
+    { "img": "/pngtree-elegant-presentation-of-delicious-mutton-biryani-png-image_13388364 (1).png", "name": "Egg Biryani","price": "$19","id":"15" },
+    { "img": "/paneer-biryani-8229 (1).png", "name": "Veg Biryani" ,"price": "$20","id":"16"},
+
+    { "img": "/coke.png", "name": "Coke","price": "$6","id":"17" },
+    { "img": "/fan.png", "name": "Fanta","price": "$6.5" ,"id":"18"},
+    { "img": "/soft-removebg-preview.png", "name": "Pepsi" ,"price": "$7","id":"19"},
+    { "img": "/mir.png", "name": "Mirinda" ,"price": "$5","id":"20"},
+
+    { "img": "/cake.png"," name": " Cheesecake","price": "$12" ,"id":"21"},
+    { "img": "/cup.jpg", "name": "Cupcake" ,"price": "$10","id":"22"},
+    { "img": "/tir.png", "name": "Tiramisu","price": "$15","id":"23" },
+    { "img": "/fal.png", "name": "Falooda","price": "$13" ,"id":"24"}
+  ]
+  
+  
+  }
